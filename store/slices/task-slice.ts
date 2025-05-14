@@ -1,4 +1,4 @@
-import { Task } from '@/app/types/task';
+import { Task } from '@/types/task';
 import { create } from 'zustand';
 
 type TaskStore = {

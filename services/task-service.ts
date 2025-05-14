@@ -1,4 +1,4 @@
-import { Task, TaskFormData } from '../types/task';
+import { Task, TaskFormData } from '@/types';
 
 const API_URL = 'http://localhost:3001/tasks';
 

@@ -1,4 +1,4 @@
-import { Todo } from '@/app/types';
+import { Todo } from '@/types';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 

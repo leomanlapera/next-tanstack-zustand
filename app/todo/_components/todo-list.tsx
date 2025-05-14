@@ -4,11 +4,11 @@ import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { useTodoStore } from '../store/index';
+import { useTodoStore } from '@/store';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
-import { cn } from '@/lib/utils/tailwind';
+import { cn } from '@/lib/tailwind';
 
 const formSchema = z.object({
   todo: z.string().min(2, {
@@ -39,7 +39,7 @@ export default function TodoList() {
 
   return (
     <div className="mx-auto max-w-md p-4">
-      <h1 className="mb-5 text-2xl font-bold">todo list</h1>
+      <h1 className="mb-5 font-bold">todo list</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex space-x-2">
           <FormField
@@ -94,11 +94,11 @@ export default function TodoList() {
           <li key={todo.id} className="flex justify-between gap-5">
             <div className="flex items-start space-x-2">
               <Checkbox
-                className="relative top-[3px]"
+                className="relative top-[2px] leading-none"
                 checked={todo.completed}
                 onClick={() => toggleTodo(todo.id)}
               />
-              <span>{todo.title}</span>
+              <span className="leading-tight">{todo.title}</span>
             </div>
             <Button onClick={() => deleteTodo(todo.id)} variant="destructive" size="sm">
               delete
