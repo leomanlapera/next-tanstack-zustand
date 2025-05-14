@@ -4,11 +4,11 @@ import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { useTodoStore } from '../store/useTodoStore';
+import { useTodoStore } from '../store/index';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils/tailwind';
 
 const formSchema = z.object({
   todo: z.string().min(2, {

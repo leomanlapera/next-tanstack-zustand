@@ -1,12 +1,6 @@
+import { Todo } from '@/app/types';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-
-export type Todo = {
-  id: string;
-  title: string;
-  completed: boolean;
-  createdAt: Date;
-};
 
 type TodoStore = {
   todos: Todo[];
