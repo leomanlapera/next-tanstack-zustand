@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Build a full-stack app",
+      "description": "A full-stack powered by Next.js, Zustand, Tanstack Query and TailwindCSS",
+      "status": "pending",
+      "priority": "low",
+      "createdAt": "2024-03-20T10:30:00.000Z",
+      "updatedAt": "2024-03-20T10:30:00.000Z"
+    }
+  ]
+}

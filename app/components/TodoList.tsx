@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 
 const formSchema = z.object({
   todo: z.string().min(2, {
-    message: 'Todo must be at least 2 characters.',
+    message: 'todo must be at least 2 characters.',
   }),
 });
 
@@ -39,7 +39,7 @@ export default function TodoList() {
 
   return (
     <div className="mx-auto max-w-md p-4">
-      <h1 className="mb-5 text-2xl font-bold">Todo List</h1>
+      <h1 className="mb-5 text-2xl font-bold">todo list</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex space-x-2">
           <FormField
@@ -48,13 +48,13 @@ export default function TodoList() {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Input placeholder="Add new todo..." {...field} />
+                  <Input placeholder="add new todo..." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Add</Button>
+          <Button type="submit">add</Button>
         </form>
       </Form>
       <div className="mb-5 mt-10 flex justify-between gap-2">
@@ -66,26 +66,26 @@ export default function TodoList() {
               'bg-blue-500': filter === 'all',
             })}
           >
-            All
+            all
           </Button>
           <Button
             size="sm"
             onClick={() => setFilter('active')}
             className={cn({ 'bg-blue-500': filter === 'active' })}
           >
-            Active
+            active
           </Button>
           <Button
             size="sm"
             onClick={() => setFilter('completed')}
             className={cn({ 'bg-blue-500': filter === 'completed' })}
           >
-            Completed
+            completed
           </Button>
         </div>
         {todos.some((todo) => todo.completed) && (
           <Button onClick={clearCompleted} variant="destructive" size="sm">
-            Clear completed
+            clear completed
           </Button>
         )}
       </div>
@@ -101,7 +101,7 @@ export default function TodoList() {
               <span>{todo.title}</span>
             </div>
             <Button onClick={() => deleteTodo(todo.id)} variant="destructive" size="sm">
-              Delete
+              delete
             </Button>
           </li>
         ))}
