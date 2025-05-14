@@ -26,13 +26,13 @@ export const useTodoStore = create<TodoStore>()(
       addTodo: (title: string) =>
         set((state) => ({
           todos: [
-            ...state.todos,
             {
               id: crypto.randomUUID(),
               title,
               completed: false,
               createdAt: new Date(),
             },
+            ...state.todos,
           ],
         })),
       toggleTodo: (id: string) =>
