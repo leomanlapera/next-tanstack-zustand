@@ -5,9 +5,9 @@ type TaskStore = {
   tasks: Task[];
   setTasks: (tasks: Task[]) => void;
   addTask: (task: Task) => void;
-  updateTask: (id: number, task: Partial<Task>) => void;
-  deleteTask: (id: number) => void;
-  getTaskById: (id: number) => Task | undefined;
+  updateTask: (id: string, task: Partial<Task>) => void;
+  deleteTask: (id: string) => void;
+  getTaskById: (id: string) => Task | undefined;
 };
 
 export const useTaskStore = create<TaskStore>((set, get) => ({

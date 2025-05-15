@@ -1,13 +1,49 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Build a full-stack app",
-      "description": "A full-stack powered by Next.js, Zustand, Tanstack Query and TailwindCSS",
+      "id": "map9vhlu-mxjbox",
+      "title": "Water a plant",
+      "description": "Take a moment to check if any of your houseplants are looking a little dry. If the soil feels dry to the touch, give it a drink until you see a little water drain out the bottom. This small act of care can help your plant thrive.",
+      "status": "in_progress",
+      "priority": "high",
+      "createdAt": "2025-05-15T11:14:33.569Z",
+      "updatedAt": "2025-05-15T11:14:33.569Z"
+    },
+    {
+      "id": "map9y3up-8h1jva",
+      "title": "Send a short \"thinking of you\" message to a friend or family member",
+      "description": "Reach out to someone you care about with a quick text, email, or message. It doesn't need to be long or elaborate – just a simple \"Hi, thinking of you!\" can brighten their day and strengthen your connection.",
+      "status": "pending",
+      "priority": "medium",
+      "createdAt": "2025-05-15T11:16:35.712Z",
+      "updatedAt": "2025-05-15T11:16:35.712Z"
+    },
+    {
+      "id": "mapa0hr9-khx5ng",
+      "title": "Spend 5 minutes tidying up one small area of your home (e.g., a desk, a shelf)",
+      "description": "Choose one specific, small space that feels a little cluttered. Set a timer for five minutes and focus only on organizing that one spot. You might be surprised at how much difference a few minutes can make.",
       "status": "pending",
       "priority": "low",
-      "createdAt": "2024-03-20T10:30:00.000Z",
-      "updatedAt": "2024-03-20T10:30:00.000Z"
+      "createdAt": "2025-05-15T11:18:27.045Z",
+      "updatedAt": "2025-05-15T11:18:27.045Z"
+    },
+    {
+      "id": "mapa14u6-9m7yr2",
+      "title": "Listen to one song you enjoy without doing anything else",
+      "description": "Pick a song that you really like and take five minutes to simply listen to it. Avoid multitasking or getting distracted by your phone. Just focus on the music, the lyrics, and how it makes you feel. It's a little moment of pure sensory enjoyment.",
+      "status": "pending",
+      "priority": "high",
+      "createdAt": "2025-05-15T11:18:56.958Z",
+      "updatedAt": "2025-05-15T11:18:56.958Z"
+    },
+    {
+      "id": "mapa1rgm-z91ii6",
+      "title": "Write down one thing you are grateful for today",
+      "description": "Take a brief pause to reflect on your day so far and identify one thing, big or small, that you feel thankful for. Jot it down in a notebook, on a piece of paper, or even in a note on your phone. This practice can help shift your focus towards the positive aspects of your life.",
+      "status": "pending",
+      "priority": "medium",
+      "createdAt": "2025-05-15T11:19:26.278Z",
+      "updatedAt": "2025-05-15T11:19:26.278Z"
     }
   ]
 }

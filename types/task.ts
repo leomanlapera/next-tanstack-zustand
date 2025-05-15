@@ -1,21 +1,20 @@
 import { z } from 'zod';
 
-export const TaskSchema = z.object({
-  id: z.number(),
-  title: z.string(),
-  description: z.string(),
+export const taskSchema = z.object({
+  title: z.string().min(1, 'Title is required'),
+  description: z.string().optional(),
   status: z.enum(['pending', 'in_progress', 'completed']),
   priority: z.enum(['low', 'medium', 'high']),
-  createdAt: z.string(),
-  updatedAt: z.string(),
 });
 
-export type Task = z.infer<typeof TaskSchema>;
+export type Task = {
+  id: string;
+  title: string;
+  description?: string;
+  status: 'pending' | 'in_progress' | 'completed';
+  priority: 'low' | 'medium' | 'high';
+  createdAt: string;
+  updatedAt: string;
+};
 
-export const TaskFormDataSchema = TaskSchema.omit({
-  id: true,
-  createdAt: true,
-  updatedAt: true,
-});
-
-export type TaskFormData = z.infer<typeof TaskFormDataSchema>;
+export type TaskFormData = z.infer<typeof taskSchema>;

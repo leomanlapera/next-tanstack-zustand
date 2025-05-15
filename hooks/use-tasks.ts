@@ -29,7 +29,7 @@ export function useTasks() {
   });
 
   const updateTaskMutation = useMutation({
-    mutationFn: ({ id, data }: { id: number; data: Partial<TaskFormData> }) =>
+    mutationFn: ({ id, data }: { id: string; data: Partial<TaskFormData> }) =>
       taskService.updateTask(id, data),
     onSuccess: (updatedTask) => {
       updateTask(updatedTask.id, updatedTask);

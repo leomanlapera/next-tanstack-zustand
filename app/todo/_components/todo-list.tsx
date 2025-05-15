@@ -8,7 +8,7 @@ import { useTodoStore } from '@/store';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
-import { cn } from '@/lib/tailwind';
+import { cn } from '@/lib/utils';
 
 const formSchema = z.object({
   todo: z.string().min(2, {

@@ -1,4 +1,5 @@
 import { Task, TaskFormData } from '@/types';
+import { generateId } from '@/lib/utils';
 
 const API_URL = 'http://localhost:3001/tasks';
 
@@ -12,20 +13,28 @@ export const taskService = {
   },
 
   async createTask(data: TaskFormData): Promise<Task> {
+    const now = new Date().toISOString();
+    const newTask: Task = {
+      ...data,
+      id: generateId(),
+      createdAt: now,
+      updatedAt: now,
+    };
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(newTask),
     });
+
     if (!response.ok) {
       throw new Error('Failed to create task');
     }
     return response.json();
   },
 
-  async updateTask(id: number, data: Partial<TaskFormData>): Promise<Task> {
+  async updateTask(id: string, data: Partial<TaskFormData>): Promise<Task> {
     const response = await fetch(`${API_URL}/${id}`, {
       method: 'PATCH',
       headers: {
@@ -39,7 +48,7 @@ export const taskService = {
     return response.json();
   },
 
-  async deleteTask(id: number): Promise<void> {
+  async deleteTask(id: string): Promise<void> {
     const response = await fetch(`${API_URL}/${id}`, {
       method: 'DELETE',
     });
