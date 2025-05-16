@@ -4,7 +4,7 @@
       "id": "map9vhlu-mxjbox",
       "title": "Water a plant",
       "description": "Take a moment to check if any of your houseplants are looking a little dry. If the soil feels dry to the touch, give it a drink until you see a little water drain out the bottom. This small act of care can help your plant thrive.",
-      "status": "in_progress",
+      "status": "pending",
       "priority": "high",
       "createdAt": "2025-05-15T11:14:33.569Z",
       "updatedAt": "2025-05-15T11:14:33.569Z"
@@ -13,7 +13,7 @@
       "id": "map9y3up-8h1jva",
       "title": "Send a short \"thinking of you\" message to a friend or family member",
       "description": "Reach out to someone you care about with a quick text, email, or message. It doesn't need to be long or elaborate – just a simple \"Hi, thinking of you!\" can brighten their day and strengthen your connection.",
-      "status": "pending",
+      "status": "completed",
       "priority": "medium",
       "createdAt": "2025-05-15T11:16:35.712Z",
       "updatedAt": "2025-05-15T11:16:35.712Z"
@@ -22,7 +22,7 @@
       "id": "mapa0hr9-khx5ng",
       "title": "Spend 5 minutes tidying up one small area of your home (e.g., a desk, a shelf)",
       "description": "Choose one specific, small space that feels a little cluttered. Set a timer for five minutes and focus only on organizing that one spot. You might be surprised at how much difference a few minutes can make.",
-      "status": "pending",
+      "status": "in_progress",
       "priority": "low",
       "createdAt": "2025-05-15T11:18:27.045Z",
       "updatedAt": "2025-05-15T11:18:27.045Z"

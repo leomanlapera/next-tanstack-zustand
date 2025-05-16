@@ -16,6 +16,11 @@ export default function Home() {
               task management app
             </Link>
           </li>
+          <li>
+            <Link href="/counter" className="underline underline-offset-4">
+              counter app
+            </Link>
+          </li>
         </ul>
       </div>
     </main>
