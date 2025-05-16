@@ -1,6 +1,6 @@
 import { Todo } from '@/types';
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { devtools, persist } from 'zustand/middleware';
 
 type TodoStore = {
   todos: Todo[];
@@ -14,7 +14,7 @@ type TodoStore = {
 
 export const useTodoStore = create<TodoStore>()(
   persist(
-    (set) => ({
+    devtools((set) => ({
       todos: [],
       filter: 'all',
       addTodo: (title: string) =>
@@ -44,7 +44,7 @@ export const useTodoStore = create<TodoStore>()(
         set((state) => ({
           todos: state.todos.filter((todo) => !todo.completed),
         })),
-    }),
+    })),
     { name: 'todo-storage' }
   )
 );
